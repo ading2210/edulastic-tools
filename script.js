@@ -8,10 +8,10 @@ function http_get(url, callback, headers=[], method="GET", content=null) {
   request.send(content);
 }
 
-function run() {
+function main() {
   let url_regex = /https:\/\/app\.edulastic\.com\/home\/class\/([a-f0-9]+)\/test\/([a-f0-9]+)\/testActivityReport\/([a-f0-9]+)/;
   if (!url_regex.test(window.location)) {
-    alert("Wrong URL!");
+    alert("Error: Invalid URL.\n\nFor reference, the URL should look like this:\nhttps://app.edulastic.com/home/class/CLASS_ID/test/TEST_ID/testActivityReport/TEST_REPORT_ID");
     return;
   }
   let matches = url_regex.exec(window.location);
@@ -33,4 +33,4 @@ function run() {
   }, headers);
 }
 
-run();
+main();
