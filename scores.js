@@ -26,6 +26,10 @@ function main() {
     ["Authorization", token]
   ];
   http_get(request_url, function(){
+    if (this.status != 200) {
+      alert(`Error: Status code ${this.status} recieved while trying to fetch the API.`);
+      return;
+    }
     let report = JSON.parse(this.responseText);
     let wrong = report.result.testActivity.wrong;
     let total = report.result.questionActivities.length;

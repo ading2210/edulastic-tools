@@ -4,19 +4,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>Edulastic Script</title>
+  <title>Edulastic Tools</title>
+  <link href="/images/icon.png" rel="icon" type="image/png"/>
+  <script src="https://cdn.jsdelivr.net/npm/@webcomponents/webcomponentsjs@2/webcomponents-loader.min.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@1/src/zero-md.min.js"></script>
   <style>
-    p, h1 {
-      font-family: Arial;
+    zero-md {
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
   </style>
 </head>
 
 <body>
-  <h1>Edulastic Script</h1>
-  <p>Script source code located here: <a href="https://github.com/ading2210/edulastic-tools/blob/main/script.js">script.js</a></p>
-  <p style="margin-bottom: 0px;">Bookmarklet:</p>
-  <code>javascript: var r = new XMLHttpRequest(); r.open("GET", "https://raw.githubusercontent.com/ading2210/edulastic-tools/main/script.js", true); r.addEventListener("load", function(){eval(this.responseText);}); r.send();</code>
+  <zero-md src="/README.md"></zero-md>
 </body>
 
 </html>
