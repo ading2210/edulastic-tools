@@ -1,3 +1,5 @@
+var url_regex = /https:\/\/app\.edulastic\.com\/student\/assessment\/([a-f0-9]+)\/class\/([a-f0-9]+)\/uta\/([a-f0-9]+)\/itemId\/([a-f0-9]+)/;
+
 //overwrite the addEventListener function with one that blocks certain events
 Element.prototype._addEventListener = Element.prototype.addEventListener;
 Element.prototype.addEventListener = function(type, listener, options) {
@@ -12,7 +14,7 @@ Element.prototype.addEventListener = function(type, listener, options) {
   else if (fullscreen_events.includes(type)) {
     console.log("edulastic-tools: intercepted event "+type);
     var callback = function(event) {
-      if (document.fullscreenElement == null) {
+      if (document.fullscreenElement == null && url_regex.test(window.location)) {
         console.log("edulastic-tools: blocked fullscreenchange function call");
       }
       else {

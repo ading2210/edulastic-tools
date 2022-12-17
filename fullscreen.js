@@ -14,9 +14,9 @@ function http_get(url, callback, headers=[], method="GET", content=null) {
 }
 
 function init() {
-  let url_regex = /https:\/\/app\.edulastic\.com\/student\/assessment\/([a-f0-9]+)\/class\/([a-f0-9]+)\/uta\/([a-f0-9]+)\/itemId\/([a-f0-9]+)/;
+  let url_regex = /https:\/\/app\.edulastic\.com.+/;
   if (!url_regex.test(window.location)) {
-    alert("Error: Invalid URL.\n\nFor reference, the URL should look like this:\nhttps://app.edulastic.com/student/assessment/{ID}/class/{ID}/uta/{ID}/itemId/{ID}");
+    alert("Error: Invalid URL.\n\nFor reference, the URL should look like this:\nhttps://app.edulastic.com/student/assessment/*\nhttps://app.edulastic.com/home/assignments");
     return;
   }
   
