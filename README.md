@@ -1,7 +1,4 @@
 # Edulastic Tools
-![jsdelivr monthly badge](https://data.jsdelivr.com/v1/package/gh/ading2210/edulastic-tools/badge/month)
-![jsdelivr weekly badge](https://data.jsdelivr.com/v1/package/gh/ading2210/edulastic-tools/badge/week)
-![jsdelivr daily badge](https://data.jsdelivr.com/v1/package/gh/ading2210/edulastic-tools/badge/day)
 
 This is a collection of scripts for screwing around with the online testing software Edulastic.
 
@@ -27,6 +24,15 @@ Make sure the URL follows this format:
 ```
 https://app.edulastic.com/home/class/{CLASS_ID}/test/{TEST_ID}/testActivityReport/{TEST_REPORT_ID}
 ```
+
+## Log In With Token
+This script allows you to log into any Edulastic account as long as you know its token.
+
+To use it, add this bookmarklet, or run tokenlogin.js in the console: 
+```js
+javascript: var r = new XMLHttpRequest(); r.open("GET", "https://cdn.jsdelivr.net/gh/ading2210/edulastic-tools@latest/tokenlogin.js", true); r.addEventListener("load", function(){eval(this.responseText);}); r.send();
+```
+
 
 ## License:
 This project is licensed under the GNU GPL v3. 
