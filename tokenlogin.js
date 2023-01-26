@@ -4,7 +4,7 @@ function http_get(url, callback, headers=[], method="GET", content=null) {
   request.open(method, url, true);
   for (const header of headers) {
     request.setRequestHeader(header[0], header[1]);
-}  
+  }
   request.send(content);
 }
 
