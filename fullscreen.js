@@ -15,12 +15,6 @@ function http_get(url, callback, headers=[], method="GET", content=null) {
 
 function init() {
   
-//  let url_regex = /https:\/\/assessment\.peardeck\.com.+/;
-//  if (!url_regex.test(window.location)) {
-//    alert("Error: Invalid URL.\n\nFor reference, the URL should look like this:\nhttps://app.edulastic.com/student/assessment/*\nhttps://app.edulastic.com/home/assignments");
-//    return;
-//  }
-  
   var url = base_url+"/fullscreen_payload.js";
   http_get(url, function(){
     var w = window.open(window.location.href);
