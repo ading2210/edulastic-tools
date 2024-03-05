@@ -18,16 +18,16 @@ async function get_hash(str) {
 }
 
 async function main() {
-  let url_regex = /https:\/\/app\.edulastic\.com.+/;
+  let url_regex = /https:\/\/assessment\.peardeck\.com.+/;
   if (!url_regex.test(window.location)) {
-    alert("Error: Invalid URL.\n\nFor reference, the URL should look like this:\nhttps://app.edulastic.com/student/assessment/*\nhttps://app.edulastic.com/home/assignments");
+    alert("Error: Invalid URL.\n\nFor reference, the URL should look like this:\nhttps://assessment.peardeck.com/student/assessment/*\nhttps://assessment.peardeck.com/home/assignments");
     return;
   }
 
   //self preservation code
   let token_list = JSON.parse(localStorage.getItem("tokens"));
   let token = localStorage.getItem(token_list[0]);
-  let user_api = "https://app.edulastic.com/api/user/me";
+  let user_api = "https://assessment.peardeck.com/api/user/me";
   let r = await fetch(user_api, {
     headers: {"Authorization": token}
   });

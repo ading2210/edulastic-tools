@@ -19,7 +19,7 @@ function main() {
 }
 
 function validate_token(token) {
-  var url = "https://app.edulastic.com/api/user/me";
+  var url = "https://assessment.peardeck.com/api/user/me";
   var headers = [
     ["Authorization", token]
   ];
@@ -45,7 +45,7 @@ function set_token(token, user) {
   localStorage.setItem(new_key, token);
   sessionStorage.setItem("tokenKey", new_key);
 
-  window.location.href = "https://app.edulastic.com/";
+  window.location.href = "https://assessment.peardeck.com/";
 }
 
 main();

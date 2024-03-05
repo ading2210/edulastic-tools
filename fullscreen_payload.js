@@ -1,4 +1,4 @@
-var url_regex = /https:\/\/app\.edulastic\.com\/student\/assessment\/([a-f0-9]+)\/class\/([a-f0-9]+)\/uta\/([a-f0-9]+)\/itemId\/([a-f0-9]+)/;
+var url_regex = /https:\/\/assessment\.peardeck\.com\/student\/assessment\/([a-f0-9]+)\/class\/([a-f0-9]+)\/uta\/([a-f0-9]+)\/itemId\/([a-f0-9]+)/;
 
 //overwrite the addEventListener function with one that blocks certain events
 Element.prototype._addEventListener = Element.prototype.addEventListener;
